@@ -1,6 +1,20 @@
+:root {
+  --bluey-grey: #8ca0bf;
+  --dark: #242c33;
+  --pale-grey: #ebf3ff;
+  --lipstick: #d8204f;
+  --macaroni-and-cheese: #f3b03b;
+  --ocean-green: #317b6c;
+  --deep-violet: #470a5a;
+  --very-light-blue: #dfe7f2;
+  --dark-grey-blue: #364459;
+  --aqua-marine: #43d9d1;
+}
+
 @font-face {
   font-family: LibreFranklin;
-  src: url(fonts/libre_franklin/LibreFranklin-SemiBold.ttf);
+  src: url(fonts/libre_franklin/LibreFranklin-Light.ttf);
+  font-weight: 300;
 }
 body {
   font-family: LibreFranklin;
@@ -13,6 +27,11 @@ h1 {
   line-height: normal;
   letter-spacing: normal;
   color: #ffffff;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+button {
+  border: none;
 }
 .left_block,
 .right_block {
@@ -79,19 +98,132 @@ header {
     }
   }
 }
+
 .body {
+  position: relative;
   display: flex;
-  height: calc(100vh - 200px);
+  justify-content: center;
+  height: calc(100vh - 146px);
   .left_block {
     display: flex;
     align-self: stretch;
     align-items: center;
+    .discription {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.57;
+      letter-spacing: 0.7px;
+      margin-right: 24px;
+    }
+    .button_login {
+      padding: 21px 37px 20px 38px;
+      background-color: #16c2b8;
+      border: none;
+      margin-top: 29px;
+      font-size: 12px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 2;
+      letter-spacing: 0.6px;
+      text-align: center;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+    .login_now {
+      font-size: 12px;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.83;
+      letter-spacing: 0.6px;
+      color: #ffffff;
+      a {
+        color: #16c2b8;
+        text-decoration: none;
+      }
+    }
   }
   .right_block {
-    background-image: url(/static/media/back.b046465b.png);
+    background-image: url(./img/back.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .slider_description {
+      background-color: var(--ocean-green);
+      width: 33%;
+      text-align: center;
+      h2 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        transform: rotate(-360deg);
+        opacity: 0.65;
+        font-family: MuseoSansCyrl;
+        font-size: 36px;
+        font-weight: 900;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1.4px;
+        color: #ffffff;
+      }
+      h3 {
+        text-transform: uppercase;
+        opacity: 0.42;
+        margin-top: 22px;
+        margin-bottom: 0;
+        font-family: LibreFranklin;
+        font-size: 10px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 3px;
+        color: #ffffff;
+      }
+    }
+  }
+  .form {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    height: 88px;
+    box-shadow: 0 6px 21px 0 rgba(140, 160, 191, 0.24);
+    background-color: #ffffff;
+    width: calc(100% - 18.7%);
+    justify-content: space-between;
+    align-items: center;
+    button {
+      width: 100px;
+      height: 100%;
+      padding: 0;
+      background-color: #16c2b8;
+    }
+    label {
+      display: flex;
+      padding-left: 24px;
+      svg {
+        padding-right: 13px;
+      }
+      input {
+        border: none;
+      }
+    }
+  }
+  .h1_gradient {
+    // opacity: 0.39;
+    background-image: linear-gradient(
+      to right,
+      #16c2b859,
+      rgba(22, 194, 184, 0)
+    );
+    padding: 0px 10px;
   }
 }
 
