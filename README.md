@@ -1,6 +1,9 @@
 Test task: Travel Agents
 
 Create React app + SASS
-2 main components:
+
+4 main components:
 Header;
-Body.
+Body;
+DropDown;
+SimpleSlider.
