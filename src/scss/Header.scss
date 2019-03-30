@@ -1,0 +1,53 @@
+.header {
+  border: solid 0.5px #8ca0bf;
+  display: flex;
+}
+.header__logoBlock {
+  align-items: center;
+  background-color: #ebf3ff;
+  display: flex;
+  justify-content: flex-start;
+}
+.header__buttonBlock {
+  float: left;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-left: solid 0.5px #8ca0bf;
+}
+.header__button-mobMenu {
+  background: none;
+}
+.navitation {
+  width: 70%;
+  float: left;
+}
+.navitation__ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 33px;
+  margin-top: 34px;
+}
+.navitation__li {
+  display: inline-flex;
+}
+.navitation__a {
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.83;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--dark-grey-blue);
+}

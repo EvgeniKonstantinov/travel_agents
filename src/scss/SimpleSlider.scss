@@ -1,0 +1,97 @@
+.sliderDescription {
+  background-color: var(--ocean-green);
+  width: 33%;
+  margin-top: -85px;
+  text-align: center;
+}
+.sliderDescription__h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  transform: rotate(-360deg);
+  opacity: 0.65;
+  font-family: MuseoSansCyrl;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  color: #ffffff;
+}
+.sliderDescription__h3 {
+  text-transform: uppercase;
+  opacity: 0.42;
+  margin-top: 22px;
+  margin-bottom: 0;
+  font-family: LibreFranklin;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+
+.slick-slider {
+  width: 100%;
+  height: 100%;
+  .slick-dots {
+    top: 54%;
+    bottom: unset;
+  }
+  .slick-dots li {
+    margin: 0 9px;
+  }
+  .slick-dots button {
+    width: 9px;
+    height: 9px;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 1px;
+    border: 1px solid #ffffff;
+    transform: rotate(-314deg);
+  }
+  .slick-dots li button:before {
+    content: "";
+  }
+  .slick-dots .slick-active button {
+    width: 9px;
+    height: 9px;
+    padding: 3px;
+    cursor: pointer;
+    background: #ffffff;
+    transform: rotate(-314deg);
+  }
+}
+.backgroundSlider {
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: -webkit-fill-available;
+}
+.slide1 {
+  background-image: url(../img/back.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide2 {
+  background-image: url(../img/back.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide3 {
+  background-image: url(../img/back.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide4 {
+  background-image: url(../img/back.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -4,9 +4,15 @@
   "private": true,
   "dependencies": {
     "node-sass": "^4.11.0",
+    "rc-dropdown": "^2.4.1",
+    "rc-menu": "^7.4.22",
     "react": "^16.8.5",
+    "react-bootstrap-dropdown-menu": "^1.1.15",
     "react-dom": "^16.8.5",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-simple-dropdown": "^3.2.3",
+    "react-slick": "^0.23.2",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

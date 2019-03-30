@@ -1,0 +1,114 @@
+.body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 146px);
+}
+
+.leftBlock {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  color: #ffffff;
+}
+.leftBlock__discription {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.57;
+  letter-spacing: 0.7px;
+  margin-right: 24px;
+}
+.leftBlock__button-login {
+  padding: 21px 37px 20px 38px;
+  background-color: #16c2b8;
+  border: none;
+  margin-top: 29px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 0.6px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.leftBlock__loginNow {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.83;
+  letter-spacing: 0.6px;
+}
+.leftBlock__loginNow-a {
+  color: #16c2b8;
+  text-decoration: none;
+}
+
+.rightBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section__form {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  box-shadow: 0 6px 21px 0 rgba(140, 160, 191, 0.24);
+  width: calc(100% - 18.7%);
+}
+.form {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  box-shadow: 0 6px 21px 0 rgba(140, 160, 191, 0.24);
+  width: 100%;
+}
+.form__content {
+  display: flex;
+  height: 88px;
+  width: 100%;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+}
+.form__block {
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+.form__block-location {
+  width: 54%;
+}
+.form__block-when,
+.form__block-duration {
+  border-left: solid 0.3px var(--bluey-grey);
+}
+.form__button {
+  width: 88px;
+  height: 100%;
+  padding: 0;
+  background-color: #16c2b8;
+}
+.form__lable {
+  display: flex;
+  padding-left: 24px;
+}
+.form__svg {
+  padding-right: 13px;
+}
+.form__input-location {
+  min-width: 250px;
+}
+.form__input {
+  border: none;
+  width: 140px;
+  font-family: LibreFranklin-medium;
+}
+.form__input::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.57;
+  letter-spacing: 0.5px;
+  color: var(--dark-grey-blue);
+}
