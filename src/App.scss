@@ -44,12 +44,17 @@ h1 {
 .h1__span-gradient {
   background-image: linear-gradient(to right, #16c2b859, rgba(22, 194, 184, 0));
   padding: 0px 10px;
+  padding-bottom: 7px;
+  background-size: 100% 46px;
+  background-position: center;
+  background-repeat-y: no-repeat;
 }
 input {
   outline: none;
 }
 button {
   border: none;
+  outline: none;
 }
 a:hover,
 button:hover {
@@ -101,7 +106,19 @@ li {
     display: none;
   }
 }
+@media only screen and (max-width: 768px) {
+  .section__form {
+    width: 100%;
+  }
+  .form__block-location {
+    width: 33%;
+  }
+}
 @media only screen and(max-width:767px) {
+  h1 {
+    letter-spacing: 0.9px;
+    font-size: 36px;
+  }
   .hide_molile {
     display: none;
   }
@@ -110,18 +127,12 @@ li {
     min-height: calc(100vh - 160px);
     text-align: center;
   }
-  .header__logoBlock > div {
-    margin-left: 0;
-  }
+
   .leftBlock__content {
     margin: 0;
   }
   .leftBlock__content-body {
     padding: 0px 57px;
-  }
-  h1 {
-    letter-spacing: 0.9px;
-    font-size: 36px;
   }
   .body {
     background-image: url(./img/back_mob.jpg);
@@ -188,7 +199,7 @@ li {
   }
   .leftBlock__discription {
     margin: 0;
-    max-height: 47px;
+    max-height: 40px;
     overflow: hidden;
   }
   .section__form {
@@ -220,5 +231,13 @@ li {
   .form_mobile {
     position: relative;
     height: 100%;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .leftBlock__content-body {
+    padding: 0px 20px;
+  }
+  .form__input-location {
+    min-width: 220px;
   }
 }

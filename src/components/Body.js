@@ -38,7 +38,7 @@ class Body extends React.Component {
     return (
       <main className="body">
         <section className="leftBlock blue no_blue">
-          <div className="leftBlock__content leftBlock__content-body ">
+          <div className="leftBlock__content  leftBlock__content-body">
             <h1>
               Travel <span className="h1__span-gradient">Agents</span> Portal
             </h1>

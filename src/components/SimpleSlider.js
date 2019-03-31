@@ -8,6 +8,7 @@ class SimpleSlider extends React.Component {
       dots: true,
       dotsClass: "slick-dots slick-thumb",
       infinite: true,
+      autoplay: true,
       arrows: false,
       speed: 500,
       slidesToShow: 1,
