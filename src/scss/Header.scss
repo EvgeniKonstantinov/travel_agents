@@ -33,7 +33,7 @@
 }
 .navitation__ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-bottom: 33px;
   margin-top: 34px;
 }
@@ -49,5 +49,5 @@
   letter-spacing: 0.6px;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--dark-grey-blue);
+  color: #364459;
 }

@@ -50,17 +50,19 @@
 .section__form {
   position: absolute;
   bottom: 0;
+  left: 0;
   display: -webkit-flex;
   display: flex;
   box-shadow: 0 6px 21px 0 rgba(140, 160, 191, 0.24);
-  width: calc(100% - 18.7%);
+  width: 100%;
+  justify-content: center;
 }
 .form {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+
   display: flex;
   box-shadow: 0 6px 21px 0 rgba(140, 160, 191, 0.24);
-  width: 100%;
+  width: calc(100% - 18.7%);
 }
 .form__content {
   display: flex;
@@ -80,7 +82,7 @@
 }
 .form__block-when,
 .form__block-duration {
-  border-left: solid 0.3px var(--bluey-grey);
+  border-left: solid 0.3px #8ca0bf;
 }
 .form__button {
   width: 88px;
@@ -110,5 +112,10 @@
   font-stretch: normal;
   line-height: 1.57;
   letter-spacing: 0.5px;
-  color: var(--dark-grey-blue);
+  color: #364459;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .form__input::placeholder {
+    line-height: 0.91;
+  }
 }

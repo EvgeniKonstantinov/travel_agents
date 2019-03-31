@@ -16,7 +16,7 @@ class SimpleSlider extends React.Component {
     };
     return (
       <aside className="rightBlock hide_molile">
-        <Slider {...settings}>
+        <Slider className="slider_block" {...settings}>
           <div className="backgroundSlider slide1">
             <div className="sliderDescription">
               <h3 className="sliderDescription__h3">destinations</h3>
