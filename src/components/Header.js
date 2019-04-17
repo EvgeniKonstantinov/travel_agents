@@ -1,6 +1,12 @@
 import React from "react";
 import { MenuDrop } from "./DropDown";
 import Dropdown from "rc-dropdown";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
 import "rc-dropdown/assets/index.css";
 import { ReactComponent as Humb } from "../img/humb.svg";
 import { ReactComponent as Logo } from "../img/logo.svg";
@@ -35,19 +41,19 @@ const Header = () => {
         <nav className="navitation hide_molile">
           <ul className="navitation__ul">
             <li className="navitation__li">
-              <a className="navitation__a" href="/">
+              <Link exact to="/" className="navitation__a">
                 DESTINATIONS
-              </a>
+              </Link>
             </li>
             <li className="navitation__li">
-              <a className="navitation__a" href="/">
+              <Link to="/" className="navitation__a">
                 Style of Travel
-              </a>
+              </Link>
             </li>
             <li className="navitation__li">
-              <a className="navitation__a" href="/">
+              <Link to="/" className="navitation__a">
                 About Us
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -56,7 +62,9 @@ const Header = () => {
             <Call />
           </div>
           <div className="header__button hide_molile">
-            <Account />
+            <Link exact to="/login" className="navitation__a">
+              <Account />
+            </Link>
           </div>
           <div className="header__button header__button-mobile blue">
             <Cart />
