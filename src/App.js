@@ -9,13 +9,16 @@ import "./App.scss";
 
 class App extends React.Component {
   render() {
-    const { user } = this.props;
+    const { user, pass } = this.props;
     return (
       <div className="main_body">
         <Router>
           <Header />
           <Route exact path="/" component={Body} />
-          <Route path="/login" render={() => <LoginPage name={user} />} />
+          <Route
+            path="/login"
+            render={() => <LoginPage name={user} pass={pass} />}
+          />
         </Router>
       </div>
     );
@@ -25,7 +28,8 @@ class App extends React.Component {
 const mapStateToProps = store => {
   console.log(store);
   return {
-    user: store.user
+    user: store.user,
+    pass: store.pass
   };
 };
 
