@@ -1,7 +1,16 @@
+import { CHECK_USER } from "../constants";
+
 export const initialState = {
-  user: "Василий",
-  pass: "11111111"
+  isAuth: false
 };
-export function rootReducer(state = initialState) {
-  return state;
+export function rootReducer(state = initialState, action) {
+  const { type, payload } = action;
+  switch (type) {
+    case CHECK_USER: {
+      console.log("Action check user: ", payload);
+      return { ...state, isAuth: !!payload.token };
+    }
+    default:
+      return state;
+  }
 }

@@ -1,25 +1,18 @@
 import React from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { checkUser } from "../actions";
 import "../scss/Login.scss";
 
-class LoginPage extends React.Component {
+class LoginPageComponent extends React.Component {
   state = {
     login: "",
     pass_enter: ""
   };
 
   LoginCheck = () => {
-    // https://reqres.in/api/users
-
     const { login, pass_enter } = this.state;
-    const { name, pass } = this.props;
-    if (name != login) {
-      alert("Неверный логин");
-    } else if (pass != pass_enter) {
-      alert("Неверный пароль");
-    } else {
-      alert("Добро пожаловать на темную сторону!");
-    }
-    // alert(login + "\n" + pass + "\n" + name + "\n" + pass_enter);
+    this.props.action.checkUser({ email: login, password: pass_enter });
   };
 
   onChangeHandler = e => {
@@ -67,5 +60,15 @@ class LoginPage extends React.Component {
     );
   }
 }
+
+const mapStateToProps = store => ({ isAuth: store.isAuth });
+const mapDispatchToProps = dispatch => ({
+  action: bindActionCreators({ checkUser }, dispatch)
+});
+
+const LoginPage = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginPageComponent);
 
 export { LoginPage };
