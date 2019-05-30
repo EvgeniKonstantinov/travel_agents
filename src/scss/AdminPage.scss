@@ -1,0 +1,44 @@
+.admin_block {
+  width: 100%;
+  min-height: calc(100vh - 140px);
+  display: flex;
+  justify-content: space-between;
+}
+.admin_nav {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  background: url(../img/black-scratone.png);
+  color: hsla(0, 0%, 100%, 0.7);
+  padding: 20px;
+}
+.admin_main {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  color: #24292e !important;
+}
+.admin_main h1,
+.admin_main p {
+  color: #24292e !important;
+}
+.admin_nav_li {
+  font-family: Roboto;
+  padding: 10px 20px;
+  background: #d7d7d7;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #0d3a7f !important;
+}
+.admin_nav_li a {
+  color: #0d3a7f !important;
+}
+.admin_main_title {
+  padding: 20px;
+  background: #dddddd;
+}
+.admin_main_content {
+  padding: 20px;
+  background: white;
+}

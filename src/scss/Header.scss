@@ -1,3 +1,6 @@
+body {
+  font-family: "Open Sans" sans-serif;
+}
 .header {
   border: solid 0.5px #8ca0bf;
   display: flex;
@@ -50,4 +53,8 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #364459;
+}
+.logo_user {
+  width: 30px;
+  height: 30px;
 }
