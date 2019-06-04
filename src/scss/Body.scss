@@ -119,3 +119,20 @@
     line-height: 0.91;
   }
 }
+.main_leftBlock,
+.main_rightBlock {
+  min-height: calc(100vh - 146px);
+  display: block;
+}
+.main_leftBlock {
+  width: 35%;
+}
+.main_rightBlock {
+  width: 65%;
+}
+.reb_block {
+  display: flex;
+
+  padding: 10px;
+  float: left;
+}

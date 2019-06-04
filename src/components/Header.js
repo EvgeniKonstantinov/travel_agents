@@ -48,8 +48,8 @@ class Headers extends React.Component {
                 </Link>
               </li>
               <li className="navitation__li">
-                <Link to="/" className="navitation__a">
-                  Style of Travel
+                <Link to="/news" className="navitation__a">
+                  Top News
                 </Link>
               </li>
               <li className="navitation__li">

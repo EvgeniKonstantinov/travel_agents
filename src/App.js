@@ -7,10 +7,11 @@ import { AdminPage } from "./components/administrator/AdminPage";
 import { LoginPage } from "./components/LoginPage";
 //  import logo from "./logo.svg";
 import "./App.scss";
+import { NewsPage } from "./components/News/NewsPage";
 
 class App extends React.Component {
   render() {
-    const { user, pass, isAuth } = this.props;
+    const { user, pass, isAuth, dataNews } = this.props;
     return (
       <div className="main_body">
         <Router>
@@ -24,6 +25,11 @@ class App extends React.Component {
             path="/admin"
             render={() => <AdminPage name={user} pass={pass} />}
           />
+          <Route
+            path="/news"
+            dataNews={dataNews}
+            render={() => <NewsPage dataNews={dataNews} />}
+          />
         </Router>
       </div>
     );
@@ -35,7 +41,8 @@ const mapStateToProps = store => {
   return {
     user: store.user,
     pass: store.pass,
-    isAuth: store.isAuth
+    isAuth: store.isAuth,
+    dataNews: store.dataNews
   };
 };
 

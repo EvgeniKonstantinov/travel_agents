@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+
 import { importNews } from "../../actions/importNews";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -7,8 +7,7 @@ import TextField from "@material-ui/core/TextField";
 
 class NewsImport extends React.Component {
   import = () => {
-    const { token } = this.state;
-    this.props.action.importNews({ apiKey: token });
+    this.props.action.importNews();
   };
   handleChange = e => {
     const { id, value } = e.currentTarget;
@@ -26,7 +25,7 @@ class NewsImport extends React.Component {
           margin="normal"
           onChange={this.handleChange}
         />
-        <button onClick={this.import}>Import</button>
+        <div onClick={this.import}>Import</div>
       </div>
     );
   }
