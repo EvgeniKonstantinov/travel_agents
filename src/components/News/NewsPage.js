@@ -10,13 +10,10 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles({
   card: {
-    width: 500
+    width: 500,
+    height: 300
   },
-  bullet: {
-    display: "inline-block",
-    margin: "20px 2px",
-    transform: "scale(0.8)"
-  },
+
   title: {
     fontSize: 14
   },
@@ -27,7 +24,7 @@ const useStyles = makeStyles({
 
 const Article = props => {
   const classes = useStyles();
-  const { dataNews } = props;
+  const { renderDataNews } = props;
   return (
     <Card className={classes.card}>
       <CardContent>
@@ -36,16 +33,16 @@ const Article = props => {
           color="textSecondary"
           gutterBottom
         >
-          {dataNews.language}
+          {renderDataNews.language}
         </Typography>
         <Typography variant="h5" component="h2">
-          {dataNews.name}
+          {renderDataNews.name}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-          watchers: {dataNews.watchers}
+          watchers: {renderDataNews.watchers}
         </Typography>
         <Typography variant="body2" component="p">
-          {dataNews.description}
+          {renderDataNews.description}
           <br />
           {'"a benevolent smile"'}
         </Typography>
@@ -58,15 +55,29 @@ const Article = props => {
 };
 
 class NewsArray extends React.Component {
+  dynamicSort(property) {
+    let sortOrder = 1;
+    if (property[0] === "-") {
+      sortOrder = -1;
+      property = property.substr(1);
+    }
+    return (a, b) => {
+      let result =
+        a[property] > b[property] ? -1 : a[property] > b[property] ? 1 : 0;
+      return result * sortOrder;
+    };
+  }
+
   renderNews() {
     const { dataNews } = this.props;
     let newsTemplate = null;
-    console.log(dataNews);
-    if (dataNews) {
-      newsTemplate = dataNews.map(item => {
+    let renderDataNews = dataNews.sort(this.dynamicSort("watchers"));
+
+    if (renderDataNews) {
+      newsTemplate = renderDataNews.map(item => {
         return (
           <div className="reb_block" key={item.id}>
-            <Article dataNews={item} />
+            <Article renderDataNews={item} />
           </div>
         );
       });
