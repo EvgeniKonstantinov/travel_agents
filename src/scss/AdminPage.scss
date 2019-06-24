@@ -42,3 +42,16 @@
   padding: 20px;
   background: white;
 }
+.import_button {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  background: beige;
+  height: 25px;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.news_admin_page {
+  margin: 0 20px;
+}

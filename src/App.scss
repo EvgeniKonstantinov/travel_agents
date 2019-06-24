@@ -56,7 +56,9 @@ button {
   border: none;
   outline: none;
 }
-
+body {
+  background: linear-gradient(to left, #bdbdbd, #848a80);
+}
 .button:hover {
   color: var(--aqua-marine);
 }

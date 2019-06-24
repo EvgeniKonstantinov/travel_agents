@@ -2,7 +2,7 @@ import { CHECK_USER } from "../constants";
 import { NEWS_IMPORT } from "../constants";
 
 export const initialState = {
-  isAuth: true,
+  isAuth: false,
   user: "No name",
   dataNews: []
 };

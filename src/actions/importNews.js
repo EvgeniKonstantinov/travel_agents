@@ -5,7 +5,6 @@ const importNews = () => {
   return async dispath => {
     const { data } = await axios.get(
       "https://api.github.com/orgs/facebook/repos",
-
       {
         headers: {
           accept: "application/json"

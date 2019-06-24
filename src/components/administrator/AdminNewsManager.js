@@ -16,7 +16,7 @@ class NewsImport extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="news_admin_page">
         <TextField
           id="token"
           label="Token"
@@ -25,7 +25,9 @@ class NewsImport extends React.Component {
           margin="normal"
           onChange={this.handleChange}
         />
-        <div onClick={this.import}>Import</div>
+        <div className="import_button" onClick={this.import}>
+          Import
+        </div>
       </div>
     );
   }
